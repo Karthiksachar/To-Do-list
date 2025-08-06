@@ -1,0 +1,234 @@
+/* Mark as Complete button styles */
+.complete-btn {
+    background: #6bcf63;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 16px;
+    font-size: 0.97em;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background 0.2s;
+}
+.complete-btn:hover {
+    background: #4caf50;
+}
+/* Sidebar styles */
+#main-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    min-height: 100vh;
+}
+#sidebar {
+    background: #5a9bff;
+    color: #fff;
+    width: 62px;
+    min-width: 62px;
+    max-width: 62px;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 2px 0 16px rgba(90,155,255,0.10);
+    font-size: 1.15em;
+    font-weight: 500;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    position: relative;
+}
+.sidebar-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.13);
+    border-radius: 50%;
+    font-size: 1.7em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+.sidebar-icon:hover {
+    background: #fff;
+    color: #5a9bff;
+    transform: scale(1.12);
+}
+.sidebar-topic {
+    position: absolute;
+    left: 62px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #5a9bff;
+    padding: 18px 32px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(90,155,255,0.10);
+    font-size: 1.15em;
+    font-weight: 600;
+    min-width: 120px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+}
+#main-app {
+    margin-left: 0;
+}
+/* Fade animations for welcome overlay and main app */
+.fade-out {
+    animation: fadeOutOverlay 0.7s cubic-bezier(.4,1.4,.6,1) forwards;
+}
+.fade-in {
+    animation: fadeInMain 0.7s cubic-bezier(.4,1.4,.6,1) forwards;
+}
+
+@keyframes fadeOutOverlay {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+@keyframes fadeInMain {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Welcome Overlay Styles */
+#welcome-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(120deg, #5a9bff 0%, #6bcf63 100%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(90,155,255,0.18);
+    padding: 48px 36px 36px 36px;
+    text-align: center;
+}
+.welcome-content h1 {
+    font-size: 2.3em;
+    margin-bottom: 12px;
+    color: #5a9bff;
+}
+.welcome-content p {
+    font-size: 1.15em;
+    margin-bottom: 28px;
+    color: #444;
+}
+#welcome-signin-btn {
+    background: linear-gradient(90deg, #5a9bff 0%, #6bcf63 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 38px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(90,155,255,0.13);
+    transition: background 0.2s, transform 0.13s;
+}
+#welcome-signin-btn:hover {
+    background: linear-gradient(90deg, #6bcf63 0%, #5a9bff 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+#add-task-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#add-task-btn:hover {
+    background-color: #0056b3;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.task-item:hover {
+    background-color: #f1f1f1;
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-item span {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.task-item .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-item .remove-btn:hover {
+    background-color: #c82333;
+}
